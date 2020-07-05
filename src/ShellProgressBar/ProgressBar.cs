@@ -24,12 +24,12 @@ namespace ShellProgressBar
 		private readonly AutoResetEvent _displayProgressEvent;
 		private readonly Task _displayProgress;
 
-		public ProgressBar(int maxTicks, string message, ConsoleColor color)
+		public ProgressBar(long maxTicks, string message, ConsoleColor color)
 			: this(maxTicks, message, new ProgressBarOptions {ForegroundColor = color})
 		{
 		}
 
-		public ProgressBar(int maxTicks, string message, ProgressBarOptions options = null)
+		public ProgressBar(long maxTicks, string message, ProgressBarOptions options = null)
 			: base(maxTicks, message, options)
 		{
 			_originalCursorTop = Console.CursorTop;

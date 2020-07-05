@@ -14,7 +14,7 @@ namespace ShellProgressBar
 
 		protected override void DisplayProgress() => _scheduleDraw?.Invoke();
 
-		internal ChildProgressBar(int maxTicks, string message, Action scheduleDraw, Action<string> writeLine,
+		internal ChildProgressBar(long maxTicks, string message, Action scheduleDraw, Action<string> writeLine,
 			ProgressBarOptions options = null, Action<ProgressBarHeight> growth = null)
 			: base(maxTicks, message, options)
 		{
