@@ -134,6 +134,8 @@ namespace ShellProgressBar
 			FinishTick(message);
 		}
 
+		public void Advance(long ticks) => Tick(CurrentTick + ticks);
+
 		private void FinishTick(string message)
 		{
 			if (message != null)
